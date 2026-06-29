@@ -1,0 +1,8 @@
+# render.yaml
+services:
+  - type: web
+    name: sistem-pakar-kepribadian
+    env: php
+    plan: free
+    buildCommand: "composer install --no-dev && npm install && npm run build"
+    startCommand: "php -S 0.0.0.0:$PORT -t public"
